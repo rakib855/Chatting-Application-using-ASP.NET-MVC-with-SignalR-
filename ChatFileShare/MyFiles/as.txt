@@ -1,0 +1,14 @@
+<div class="row ml-3 mr-3 mt-3">
+            <label class="col-form-label">Select Category :</label>
+            <select class="form-control" [(ngModel)]="selectedItemType" (ngModelChange)="selectItemType()">
+                <option value="" [selected]="true"> Please choose one </option>
+                <option *ngFor="let item of items">{{item}}</option>
+            </select>
+        </div>
+        <div class="row ml-3 mr-3 mt-5">
+            <label class="col-form-label">Select Item :</label>
+            <select class="form-control" [(ngModel)]="selectedItemName" (ngModelChange)="selectItemName()">
+                <option value="" [selected]="true"> Please choose one </option>
+                <option *ngFor="let selectedItem of selectedItems">{{selectedItem.itemName}}</option>
+            </select>
+        </div>
